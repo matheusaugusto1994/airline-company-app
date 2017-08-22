@@ -1,0 +1,76 @@
+/* PAGE: MAIN */
+.page-main {}
+
+    .page-main .place {
+        font-weight: bold;
+    }
+
+    .page-main .datetime {
+        font-size: 14px;
+    }
+
+    .page-main .separator {
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        display: inline-block;
+        margin: 0 16px;
+        background-color: #FFF;
+    }
+
+    .page-main .arrow {
+        margin: 0 8px;
+        font-size: 20px;
+    }
+
+    .page-main .search {
+        margin: 32px auto 32px auto;
+        max-width: 600px;
+    }
+
+    .page-main .search input {
+        border: 1px solid #1976AD;
+        box-shadow: none;
+        border-radius: 3px;
+        appearance: none;
+        
+    }
+
+    .page-main .title {
+        margin: 32px auto 32px auto;
+        max-width: 600px;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .page-main .panel-heading {
+        background-color: #1976AD;
+        color: #fff;
+    }
+
+/* COMPONENT: CUSTOM ACCORDION*/
+.custom-accordion {
+}
+    .custom-accordion .panel-default{
+        border-color: #1976AD;
+    }    
+
+    .custom-accordion .panel-title{
+        display: flex;
+    }
+
+    .custom-accordion .caret{
+        margin-top: 14px;
+    }
+
+    .custom-accordion .custom-accordion__title {
+        flex-grow: 1;
+        display: inline-flex;
+        align-items: center;
+        flex-wrap: wrap;
+        line-height: 1.5;
+    }
+
+
+/* UTILS */
+.u-margin-bottom-1 { margin-bottom: 4px; }

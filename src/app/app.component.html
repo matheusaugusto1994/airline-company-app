@@ -1,0 +1,62 @@
+<div class="container page-main">
+  <div class="row title">
+    Airline Company
+  </div>
+  <div class="row search">
+    <div class="col-md-12">
+      <input #search (keyup)="0" class="form-control" placeholder="Search by destiny"> 
+    </div>
+  </div>
+    <!-- regular accordion -->
+    <accordion *ngFor="let flight of flights | filterByDestiny:search.value" [showArrows]="true" class="custom-accordion" primary>
+        <accordion-group>
+          <accordion-heading class="custom-accordion__title">
+            <span>Voo {{ flight.id }}</span>
+            <span class="separator"></span>
+            <span class="place">{{ flight.origin }}</span>
+            <span class="arrow"> → </span>
+            <span class="place">{{ flight.destiny }}</span>
+            <span class="separator"></span>
+            <span class="datetime">{{ flight.start | date: 'dd/MM/yyyy - HH:mm' }}</span>
+          </accordion-heading>
+
+          <div class="row">
+              <div class="col-md-8">
+                <div class='col-md-12'>
+                  <div class="row">
+                    <property label="Origin: " value="{{flight.origin}}" class="col-sm-6 col-md-6 col-lg-6"></property>
+                    <property label="Destiny: " value="{{flight.destiny}}" class="col-sm-6 col-md-6 col-lg-6"></property>
+                  </div>
+                </div>
+                <div class='col-md-12'>
+                  <div class="row">
+                    <property label="Start: " value="{{flight.start | date:'dd/MM/yyyy - HH:mm'}}" class="col-sm-6 col-md-6 col-lg-6"></property>  
+                    <property label="End: " value="{{flight.end | date:'dd/MM/yyyy - HH:mm'}}" class="col-sm-6 col-md-6 col-lg-6"></property>
+                  </div>
+                </div>
+                <div class='col-md-12'>
+                  <div class="row">
+                    <property label="Pilot: " value="{{flight.pilot.name}}" class="col-sm-6 col-md-6 col-lg-6"></property>  
+                    <property label="Pilot's birthday: " value="{{flight.pilot.birthday | date:'dd/MM/yyyy'}}" class="col-sm-6 col-md-6 col-lg-6"></property>
+                    </div>
+                </div>
+                <div class='col-md-12'>
+                  <div class="row">
+                    <property label="Airplane: " value="{{flight.airplane.model}}" class="col-sm-6 col-md-6 col-lg-6"></property>  
+                    <property label="Airplane capacity: " value="{{flight.airplane.capacity}}" class="col-sm-6 col-md-6 col-lg-6"></property>
+                    </div>
+                </div>
+              </div>
+              
+              <div class='col-md-4'>
+                  <div class="row col-md-12">
+                    <strong class="property col-md-12">Status</strong>
+                    <div *ngFor="let state of flight.flightStatus" class="col-sm-12 col-md-12 col-lg-12 u-margin-bottom-1">
+                        {{state.status}} - {{state.time | date:'dd/MM/yyyy - HH:mm'}}
+                    </div>
+                  </div>
+              </div> 
+          </div>
+        </accordion-group>
+    </accordion>
+</div>
