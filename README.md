@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `npm install -g @angular/cli` to install the [Angular CLI](https://cli.angular.io/) globally
 
-Run `npm install` to install packages and dependencies via [Node](https://nodejs.org/en/).
+Run `npm install` in project to install packages and dependencies via [Node](https://nodejs.org/en/).
 
 ## Development server
 
