@@ -5,15 +5,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FilterByDestiny } from './app.pipes';
 
-import { AccordionModule } from 'ng2-accordion';
-import { MomentModule } from 'angular2-moment';
+import { CustomContentModule } from './custom-content/custom-content.module';
 
-import { PropertyModule } from './property/property.module';
+import { AccordionModule } from 'ng2-accordion';
 
 import 'rxjs/add/operator/map';
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, AccordionModule, MomentModule, PropertyModule],
+  imports: [BrowserModule, HttpModule, AccordionModule, CustomContentModule],
   declarations: [AppComponent, FilterByDestiny],
   providers: [],
   bootstrap: [AppComponent]

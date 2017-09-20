@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-8">
+      <div class='col-md-12'>
+        <div class="row">
+          <property label="Origin: " value="{{flight.origin}}" class="col-sm-6 col-md-6 col-lg-6"></property>
+          <property label="Destiny: " value="{{flight.destiny}}" class="col-sm-6 col-md-6 col-lg-6"></property>
+        </div>
+      </div>
+      <div class='col-md-12'>
+        <div class="row">
+          <property label="Start: " value="{{flight.start | date:'dd/MM/yyyy - HH:mm'}}" class="col-sm-6 col-md-6 col-lg-6"></property>  
+          <property label="End: " value="{{flight.end | date:'dd/MM/yyyy - HH:mm'}}" class="col-sm-6 col-md-6 col-lg-6"></property>
+        </div>
+      </div>
+      <div class='col-md-12'>
+        <div class="row">
+          <property label="Pilot: " value="{{flight.pilot.name}}" class="col-sm-6 col-md-6 col-lg-6"></property>  
+          <property label="Pilot's birthday: " value="{{flight.pilot.birthday | date:'dd/MM/yyyy'}}" class="col-sm-6 col-md-6 col-lg-6"></property>
+          </div>
+      </div>
+      <div class='col-md-12'>
+        <div class="row">
+          <property label="Airplane: " value="{{flight.airplane.model}}" class="col-sm-6 col-md-6 col-lg-6"></property>  
+          <property label="Airplane capacity: " value="{{flight.airplane.capacity}}" class="col-sm-6 col-md-6 col-lg-6"></property>
+          </div>
+      </div>
+    </div>
+    
+    <div class='col-md-4'>
+        <div class="row col-md-12">
+          <strong class="property col-md-12">Status</strong>
+          <div *ngFor="let state of flight.flightStatus" class="col-sm-12 col-md-12 col-lg-12 u-margin-bottom-1">
+              {{state.status}} - {{state.time | date:'dd/MM/yyyy - HH:mm'}}
+          </div>
+        </div>
+    </div> 
+</div>

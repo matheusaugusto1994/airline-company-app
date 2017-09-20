@@ -1,0 +1,21 @@
+.custom-accordion {
+}
+    .custom-accordion .panel-default{
+        border-color: #1976AD;
+    }    
+
+    .custom-accordion .panel-title{
+        display: flex;
+    }
+
+    .custom-accordion .caret{
+        margin-top: 14px;
+    }
+
+    .custom-accordion .custom-accordion__title {
+        flex-grow: 1;
+        display: inline-flex;
+        align-items: center;
+        flex-wrap: wrap;
+        line-height: 1.5;
+    }
